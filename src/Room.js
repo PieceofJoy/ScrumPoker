@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button'; 
 
 const Room = () => {
     return (
         <div>
-            Hello Room
-            <Link to="/">Go to Main</Link>
+            Scrum Poker Room 
+            <Link to="/"> 
+                <Button variant="contained" color="primary">
+                    Exit
+                </Button>
+            </Link>
         </div>
     );
 };
