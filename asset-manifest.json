@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ScrumPoker/static/css/main.a11c26a6.chunk.css",
-    "main.js": "/ScrumPoker/static/js/main.cdbd92ec.chunk.js",
-    "main.js.map": "/ScrumPoker/static/js/main.cdbd92ec.chunk.js.map",
+    "main.js": "/ScrumPoker/static/js/main.1286b3e1.chunk.js",
+    "main.js.map": "/ScrumPoker/static/js/main.1286b3e1.chunk.js.map",
     "runtime-main.js": "/ScrumPoker/static/js/runtime-main.1ae37de9.js",
     "runtime-main.js.map": "/ScrumPoker/static/js/runtime-main.1ae37de9.js.map",
-    "static/js/2.a81c2ac1.chunk.js": "/ScrumPoker/static/js/2.a81c2ac1.chunk.js",
-    "static/js/2.a81c2ac1.chunk.js.map": "/ScrumPoker/static/js/2.a81c2ac1.chunk.js.map",
+    "static/js/2.b4e74b5f.chunk.js": "/ScrumPoker/static/js/2.b4e74b5f.chunk.js",
+    "static/js/2.b4e74b5f.chunk.js.map": "/ScrumPoker/static/js/2.b4e74b5f.chunk.js.map",
     "index.html": "/ScrumPoker/index.html",
-    "precache-manifest.06392fbee45e26c51de3aa97d0d89382.js": "/ScrumPoker/precache-manifest.06392fbee45e26c51de3aa97d0d89382.js",
+    "precache-manifest.55faf55d5b7033ff48cca4a0bd9de444.js": "/ScrumPoker/precache-manifest.55faf55d5b7033ff48cca4a0bd9de444.js",
     "service-worker.js": "/ScrumPoker/service-worker.js",
     "static/css/main.a11c26a6.chunk.css.map": "/ScrumPoker/static/css/main.a11c26a6.chunk.css.map",
-    "static/js/2.a81c2ac1.chunk.js.LICENSE": "/ScrumPoker/static/js/2.a81c2ac1.chunk.js.LICENSE"
+    "static/js/2.b4e74b5f.chunk.js.LICENSE": "/ScrumPoker/static/js/2.b4e74b5f.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.1ae37de9.js",
-    "static/js/2.a81c2ac1.chunk.js",
+    "static/js/2.b4e74b5f.chunk.js",
     "static/css/main.a11c26a6.chunk.css",
-    "static/js/main.cdbd92ec.chunk.js"
+    "static/js/main.1286b3e1.chunk.js"
   ]
 }
