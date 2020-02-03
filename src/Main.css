@@ -32,3 +32,11 @@ h1 {
     padding: 10px;
     text-align: center;
 }
+
+#create-room-button {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 5%;
+}

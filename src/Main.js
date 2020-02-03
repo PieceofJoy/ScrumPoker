@@ -27,7 +27,7 @@ const Main = () => {
           Room ID: 
           <Input value={inputValue} onChange={(e) => setInputeValue(e.target.value)} />
           <Link to="/room"> 
-          <Button variant="contained" color="primary" onClick={() => setOpen(true)}>  
+          <Button id="create-room-button" variant="contained" color="primary" onClick={() => setOpen(true)}>  
           Create Room 
           </Button>
           </Link>
