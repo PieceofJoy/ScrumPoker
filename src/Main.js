@@ -22,6 +22,10 @@ const Main = () => {
           Create Room
         </Button>
       </div>
+      <Modal> 
+        
+
+      </Modal>
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="create-modal"> 
           Room ID: 
