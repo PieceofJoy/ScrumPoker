@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap');
+
 button {
     display: flex;
     justify-content: center;
@@ -11,4 +13,25 @@ h2.h3 {
         justify-content: center;
     }
 
+.cards-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+}
 
+.cards {
+    font-size: 50px;
+    font-family: 'Cabin Sketch', cursive, Verdana, Geneva, Tahoma, sans-serif; 
+    width: 126px;
+    height: 155px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border: gray;
+    position: relative;
+    cursor: default;
+    color: #1e2a36;
+    box-shadow: 2px 4px 8px -1px hsla(0,0%,51%,.7);
+    transition-duration: 1s;
+}
