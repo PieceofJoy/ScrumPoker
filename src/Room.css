@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap');
 
-button {
-    display: flex;
-    justify-content: center;
-    margin: 0px 10px;
-}
 
 h2.h3 {
         display: flex;
@@ -24,14 +19,27 @@ h2.h3 {
 .cards {
     font-size: 50px;
     font-family: 'Cabin Sketch', cursive, Verdana, Geneva, Tahoma, sans-serif; 
-    width: 126px;
+    width: 125px;
     height: 155px;
     margin-right: 12px;
     margin-bottom: 12px;
     border: gray;
     position: relative;
-    cursor: default;
+    cursor: pointer;
     color: #1e2a36;
     box-shadow: 2px 4px 8px -1px hsla(0,0%,51%,.7);
-    transition-duration: 1s;
+    transition-duration: .5s;
+}
+
+.cards:hover {
+    font-size: 4em;
+}
+
+.function {
+    cursor: pointer;
+
+}
+
+.show-btn.MuiButtonBase-root {
+    margin: 0px 10px;
 }

@@ -15,25 +15,23 @@ const Main = () => {
         <h1>Scrum Poker</h1>
       </div>
       <div className="button-wrapper">
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
           Join Room
         </Button>
-        <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
-          Create Room
-        </Button>
+        <Link to="/room">
+          <Button variant="contained" color="primary">
+            Create Room
+          </Button>
+        </Link>
       </div>
-      <Modal> 
-        
-
-      </Modal>
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="create-modal"> 
           Room ID: 
           <Input value={inputValue} onChange={(e) => setInputeValue(e.target.value)} />
           <Link to="/room"> 
-          <Button id="create-room-button" variant="contained" color="primary" onClick={() => setOpen(true)}>  
-          Create Room 
-          </Button>
+            <Button id="create-room-button" variant="contained" color="primary">  
+              Join
+            </Button>
           </Link>
         </div>        
       </Modal>

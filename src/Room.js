@@ -7,9 +7,10 @@ const Room = () => {
     return (
         <div> 
             <div>
+                <Link to="/"> 
                 <h2>  Scrum Poker Room </h2>
+                </Link>
             </div>
-        
             <div>
             <h3> Select a card </h3>
                 <div class="cards-button"> 
@@ -26,21 +27,16 @@ const Room = () => {
                     <button class="cards"> 34 </button>
                     <button class="cards"> 55 </button>
                     <button class="cards"> 89 </button>
-                    <button class="cards"> ? </button>
+                    <button class="cards"> Skip </button>
                 </div>
             </div>
-
             <div> 
-                <Link to="/"> 
-                    <Button variant="contained" color="primary">
-                        Exit
-                    </Button>
-                </Link>
-                
-                    <Button variant="contained" color="primary">
-                            Vote 
-                    </Button>
-                
+                <Button className="show-btn" variant="contained" color="primary">
+                    Show Results 
+                </Button>
+                <Button variant="contained" color="primary">
+                    Hide Results 
+                </Button>
             </div>
         </div>
     );
