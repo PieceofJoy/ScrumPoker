@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e93e8afb26dc97a29294c930bb059dfd",
+    "revision": "35e39535ebc18cb59d349c8747c78fa9",
     "url": "/ScrumPoker/index.html"
   },
   {
-    "revision": "afbfceca5714c3079c98",
-    "url": "/ScrumPoker/static/css/main.a5ee3fd1.chunk.css"
+    "revision": "da147e3219acaeaada76",
+    "url": "/ScrumPoker/static/css/main.15857361.chunk.css"
   },
   {
     "revision": "5f48fa922008763cfb30",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ScrumPoker/static/js/2.f1d66cfd.chunk.js.LICENSE"
   },
   {
-    "revision": "afbfceca5714c3079c98",
-    "url": "/ScrumPoker/static/js/main.0e893726.chunk.js"
+    "revision": "da147e3219acaeaada76",
+    "url": "/ScrumPoker/static/js/main.be921534.chunk.js"
   },
   {
     "revision": "88f7334b4ad7654776c1",
