@@ -18,11 +18,9 @@ const Main = () => {
         <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
           Join Room
         </Button>
-        <Link to="/room">
-          <Button variant="contained" color="primary">
-            Create Room
-          </Button>
-        </Link>
+        <Button variant="contained" color="primary">
+          Create Room
+        </Button>
       </div>
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="create-modal"> 

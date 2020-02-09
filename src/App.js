@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   HashRouter,
   Switch,
@@ -8,7 +8,7 @@ import Main from './Main';
 import Room from './Room';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <HashRouter basename="/">
