@@ -6,8 +6,10 @@ import { Input } from '@material-ui/core';
 import './Main.css';
 
 const Main = () => {
-  const [open, setOpen] = useState(false);
-  const [inputValue, setInputeValue] = useState('');
+  const [joinOpen, setJoinOpen] = useState(false);
+  const [createOpen, setCreateOpen] = useState(false);
+  const [roomId, setRoomId] = useState('');
+  const [userName, setUserName] = useState('');
 
   return (
     <div className="main-page">
@@ -15,20 +17,37 @@ const Main = () => {
         <h1>Scrum Poker</h1>
       </div>
       <div className="button-wrapper">
-        <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
+        <Button variant="contained" color="primary" onClick={() => setJoinOpen(true)}>
           Join Room
         </Button>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={() => setCreateOpen(true)}>
           Create Room
         </Button>
       </div>
-      <Modal open={open} onClose={() => setOpen(false)}>
+      <Modal open={joinOpen} onClose={() => setJoinOpen(false)}>
         <div className="create-modal"> 
-          Room ID: 
-          <Input value={inputValue} onChange={(e) => setInputeValue(e.target.value)} />
+          <div>
+            Room ID: 
+            <Input value={roomId} onChange={(e) => setRoomId(e.target.value)} />
+          </div>
+          <div>
+            User Name: 
+            <Input value={userName} onChange={(e) => setUserName(e.target.value)} />
+          </div>
           <Link to="/room"> 
             <Button id="create-room-button" variant="contained" color="primary">  
               Join
+            </Button>
+          </Link>
+        </div>        
+      </Modal>
+      <Modal open={createOpen} onClose={() => setCreateOpen(false)}>
+        <div className="create-modal"> 
+          User Name: 
+          <Input value={userName} onChange={(e) => setUserName(e.target.value)} />
+          <Link to="/room"> 
+            <Button id="create-room-button" variant="contained" color="primary">  
+              Create
             </Button>
           </Link>
         </div>        
