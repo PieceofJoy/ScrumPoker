@@ -24,6 +24,7 @@ io.on('connection', (socket) => {
         socket.name = name;
         socket.roomId = id;
         socket.join(id);
+        socket.emit('created', id);
     });
 
     socket.on('join', ({ id, name}) => {

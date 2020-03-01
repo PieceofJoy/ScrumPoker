@@ -16,7 +16,7 @@ const App = () => {
           <Route exact path="/">
             <Main />
           </Route>
-          <Route path="/room">
+          <Route path="/room/:roomId">
             <Room />
           </Route>
         </Switch>
