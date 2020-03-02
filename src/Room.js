@@ -11,6 +11,10 @@ const Room = () => {
                 <h2>  Scrum Poker Room </h2>
                 </Link>
             </div>
+            <div class ="user-display"> 
+                <div class = 'user-header'> Users </div>
+                <div class = "user-list"> </div> 
+            </div> 
             <div>
             <h3> Select a card </h3>
                 <div class="cards-button"> 
