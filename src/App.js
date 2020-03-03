@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Switch,
-  Route,
-  useHistory,
-} from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
 import { initSocket } from './socket';
 import Main from './Main';
 import Room from './Room';
@@ -20,16 +16,16 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route path="/room/:roomId">
-            <Room users={state.users} />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+        <Route path="/room/:roomId">
+          <Room users={state.users} />
+        </Route>
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
