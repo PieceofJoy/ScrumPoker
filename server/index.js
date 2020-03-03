@@ -1,7 +1,6 @@
 const express = require('express');
 const uuidv4 = require('uuid/v4');
-const omit = require('lodash/omit');
-const keys = require('lodash/keys');
+const lodash = require('lodash');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
@@ -29,6 +28,7 @@ io.on('connection', (socket) => {
         room[socket.id] = {
             name
         };
+        socket.roomId = id;
         // Add socket to room
         socket.join(id);
         // Emit created and update event
@@ -44,8 +44,9 @@ io.on('connection', (socket) => {
     });
 
     socket.on('vote', (score) => {
+        lodash.set(rooms, [`${socket.roomId}`, `${socket.id}`, 'score'], score);
         // On vote, emit vote to other users
-        io.to(socket.roomId).emit('voted', { id: socket.id, score });
+        io.to(socket.roomId).emit('update', rooms[socket.roomId]);
     });
 
     socket.on('hide', (id) => {
@@ -54,10 +55,10 @@ io.on('connection', (socket) => {
 
     socket.on('leave', ({ id, name }) => {
         // Remove the user from the room
-        omit(rooms[id], [name]);
+        lodash.omit(rooms[id], [name]);
         // Remove the room if no ones inside
-        if (keys(rooms[id]).length === 0) {
-            omit(rooms, [id]);
+        if (lodash.keys(rooms[id]).length === 0) {
+            lodash.omit(rooms, [id]);
         }
     });
 });
