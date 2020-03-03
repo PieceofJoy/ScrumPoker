@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal'; 
 import { Input } from '@material-ui/core';
-import State from './State';
-import { createRoom, initSocket } from './socket';
+import { createRoom } from './socket';
 import './Main.css';
 
 const Main = () => {
@@ -12,12 +11,7 @@ const Main = () => {
   const [createOpen, setCreateOpen] = useState(false);
   const [roomId, setRoomId] = useState('');
   const [userName, setUserName] = useState('');
-  const state = useContext(State);
-  const history = useHistory();
 
-  useEffect(() => {
-    initSocket(state, history);
-  }, []);
   return (
     <div className="main-page">
       <div>
@@ -52,7 +46,7 @@ const Main = () => {
         <div className="create-modal"> 
           User Name: 
           <Input value={userName} onChange={(e) => setUserName(e.target.value)} />
-            <Button id="create-room-button" variant="contained" color="primary" onClick={createRoom}>  
+            <Button id="create-room-button" variant="contained" color="primary" onClick={() => createRoom(userName)}>  
               Create
             </Button>
         </div>        

@@ -3,13 +3,20 @@ import io from 'socket.io-client';
 
 export const socket = io.connect('http://localhost:80/');
 
-export const createRoom = () => {
-    socket.emit('create', '');
+export const createRoom = (name) => {
+    socket.emit('create', name);
 };
 
-export const initSocket = (state, history) => {
+export const initSocket = (setState, history) => {
     socket.on('created', (roomId) => {
         history.push(`/room/${roomId}`);
+    });
+
+    socket.on('update', (users) => {
+        setState((state) => ({
+            ...state,
+            users
+        }));
     });
 }
 

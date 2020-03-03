@@ -17,14 +17,23 @@ app.get('/', function(req, res) {
 app.set('port', port);
 server.listen(port);
 
+const rooms = {};
+
 io.on('connection', (socket) => {
     socket.on('create', (name) => {
-        // Create the room and add user to the room
         const id = uuidv4();
-        socket.name = name;
-        socket.roomId = id;
+        //  Create new room
+        rooms[id] = {};
+        const room = rooms[id];
+        // Add user to room
+        room[socket.id] = {
+            name
+        };
+        // Add socket to room
         socket.join(id);
+        // Emit created and update event
         socket.emit('created', id);
+        io.to(id).emit('update', rooms[id]);
     });
 
     socket.on('join', ({ id, name}) => {
