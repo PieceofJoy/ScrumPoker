@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ScrumPoker/precache-manifest.ae335602b813ad5a6c38f4e7d7deff87.js"
+  "/ScrumPoker/precache-manifest.d1168441bfbebd3b150e18a004d4de01.js"
 );
 
 self.addEventListener('message', (event) => {
