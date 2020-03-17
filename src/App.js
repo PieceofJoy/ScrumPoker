@@ -7,7 +7,8 @@ import './App.css';
 
 const App = () => {
   const [state, setState] = useState({
-    users: {}
+    users: {},
+    isScoreShown: false,
   });
   const history = useHistory();
 
@@ -21,7 +22,7 @@ const App = () => {
           <Main />
         </Route>
         <Route path="/room/:roomId">
-          <Room users={state.users} />
+          <Room users={state.users} isScoreShown={state.isScoreShown} />
         </Route>
       </Switch>
     </div>

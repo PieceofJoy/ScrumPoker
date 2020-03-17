@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import { vote } from './socket';
+import { showScore, hideScore } from './socket';
 import './Room.css';
 
-const Room = ({ users }) => {
+const Room = ({ users, isScoreShown }) => {
   return (
     <div>
       <div>
@@ -18,7 +19,7 @@ const Room = ({ users }) => {
           <div className="user-list">
             {Object.keys(users).map((key, index) => (
               <div key={users.name + index}>
-                {users[key].name} {users[key].score}
+                {users[key].name} {isScoreShown ? users[key].score : ''}
               </div>
             ))}
           </div>
@@ -44,10 +45,19 @@ const Room = ({ users }) => {
         </span>
       </div>
       <div>
-        <Button className="show-btn" variant="contained" color="primary">
+        <Button 
+          className="show-btn" 
+          variant="contained" 
+          color="primary" 
+          onClick={showScore}
+        >
           Show Results
         </Button>
-        <Button variant="contained" color="primary">
+        <Button className="hide-btn" 
+          variant="contained" 
+          color="primary" 
+          onClick={hideScore}
+        >
           Hide Results
         </Button>
       </div>

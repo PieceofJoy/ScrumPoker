@@ -48,9 +48,15 @@ io.on('connection', (socket) => {
         // On vote, emit vote to other users
         io.to(socket.roomId).emit('update', rooms[socket.roomId]);
     });
+    
+    socket.on('showScore', () => {
+        // On show score, emit onShowScore to room
+        io.to(socket.roomId).emit('onShowScore');
+    });
 
-    socket.on('hide', (id) => {
-
+    socket.on('hideScore', () => {
+        // On hide score, emit onHideScore to room
+        io.to(socket.roomId).emit('onHideScore');
     });
 
     socket.on('leave', ({ id, name }) => {
