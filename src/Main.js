@@ -41,13 +41,10 @@ const Main = () => {
           </div>
           <div>
             User Name:
-            <Input
-              value={userName}
-              onChange={e => setUserName(e.target.value)}
-            />
+            <Input value={userName} onChange={e => setUserName(e.target.value)} />
           </div>
           <Link to="/room">
-            <Button id="create-room-button" variant="contained" color="primary">
+            <Button id="create-room-button" variant="contained" color="primary" onClick={() => createRoom(userName)}>
               Join
             </Button>
           </Link>
