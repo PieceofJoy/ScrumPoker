@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 
 const appUrl = process.env.NODE_ENV === 'development' 
-  ? 'http://localhost:80/' : 'https://scrum-pokers.herokuapp.com/80';
+  ? 'http://localhost:80/' : 'https://scrum-pokers.herokuapp.com';
 
 export const socket = io.connect(appUrl);
 
