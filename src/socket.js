@@ -1,6 +1,9 @@
 import io from 'socket.io-client';
 
-export const socket = io.connect('http://localhost:80/');
+const appUrl = process.env.NODE_ENV === 'development' 
+  ? 'http://localhost:80/' : 'https://scrum-pokers.herokuapp.com/80';
+
+export const socket = io.connect(appUrl);
 
 export const createRoom = name => {
   socket.emit('create', name);
